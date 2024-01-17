@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_17_160953) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_17_173956) do
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
@@ -30,6 +30,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_17_160953) do
     t.text "rational_thought", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_works_on_user_id"
   end
 
+  add_foreign_key "works", "users"
 end
