@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 10 }
   validate :password_complexity
 
+  has_many :works
+  
   private
 
   def password_complexity
