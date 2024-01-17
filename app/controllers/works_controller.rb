@@ -2,9 +2,7 @@ class WorksController < ApplicationController
   before_action :move_to_index, except: [:index]
   
   def index
-    # if user_signed_in?
-      # @works = current_user.works
-    # end
+    @works = current_user.works
   end
 
   def new

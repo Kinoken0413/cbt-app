@@ -3,3 +3,8 @@
 
 
 <a href="<%= new_work_path %>">ワークを開始する</a>
+
+<div class="works">
+  <%= render partial: 'work', locals: { works: @works } %>
+</div>
+
