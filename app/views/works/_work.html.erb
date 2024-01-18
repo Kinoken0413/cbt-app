@@ -4,6 +4,8 @@
       <h2><%= work.automatic_thought %></h2>
       <p>Cognitive Distortion: <%= CognitiveDistortion.find(work.cognitive_distortion_id).name %></p>
       <p>Rational Thought: <%= work.rational_thought %></p>
+
+      <%= link_to "詳細を見る", work_path(work.id) %>
     </div>
   <% end %>
 <% else %>
