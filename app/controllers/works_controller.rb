@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!
   before_action :move_to_index, except: [:index]
-  before_action :set_work, only: [:show]
+  before_action :set_work, only: [:show, :edit, :update]
   
   def index
     @works = current_user.works
@@ -21,6 +21,17 @@ class WorksController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @work.update(work_params)
+      redirect_to work_path(@work.id)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
