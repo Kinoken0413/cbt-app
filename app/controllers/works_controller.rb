@@ -34,6 +34,12 @@ class WorksController < ApplicationController
     end
   end
 
+  def destroy
+    work = Work.find(params[:id])
+    work.destroy
+    redirect_to root_path
+  end
+
   private
 
   def move_to_index
