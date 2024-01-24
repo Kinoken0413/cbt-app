@@ -1,7 +1,6 @@
-<h1>Works#index</h1>
-<p>Find me in app/views/works/index.html.erb</p>
-
-<a href="<%= new_work_path %>">ワークを開始する</a>
+<div class="center_button">
+  <a href="<%= new_work_path %>" class="work_start_button">ワークを開始する</a>
+</div>
 
 <div class="works">
   <%= render partial: 'work', locals: { works: @works } %>
