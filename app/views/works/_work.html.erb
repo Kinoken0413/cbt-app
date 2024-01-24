@@ -1,13 +1,31 @@
-<% if works %>
-  <% works.each do |work| %>
-    <div class="work">
-      <h2>自動思考： <%= work.automatic_thought %></h2>
-      <p>認知のゆがみ: <%= CognitiveDistortion.find(work.cognitive_distortion_id).name %></p>
-      <p>合理的な反応: <%= work.rational_thought %></p>
-
-      <%= link_to "詳細を見る", work_path(work.id) %>
-    </div>
-  <% end %>
+<% if works.any? %>
+  <div class="works_container">
+    <table class="works_table">
+      <thead>
+        <tr>
+          <th>投稿日時</th>
+          <th>自動思考</th>
+          <th>認知のゆがみ</th>
+          <th>合理的な反応</th>
+          <th>詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% works.each do |work| %>
+          <tr>
+            <td class="cell_date">
+              <%= work.created_at.strftime('%Y年%-m月%-d日') %><br>
+              <%= work.created_at.strftime('%H時%M分') %>
+            </td>
+            <td class="cell_auto"><%= work.automatic_thought %></td>
+            <td class="cell_distortion"><%= CognitiveDistortion.find(work.cognitive_distortion_id).name %></td>
+            <td class="cell_rational"><%= work.rational_thought %></td>
+            <td class="cell_detail"><%= link_to "詳細を見る", work_path(work.id) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 <% else %>
   <p>No works available.</p>
 <% end %>
