@@ -1,0 +1,12 @@
+.application_title {
+  background-color: #33CC66;
+  display: inline-block; /* 文字の幅だけ色を変えるために必要なプロパティ */
+  color: white;
+  padding: 20px; /* 必要に応じて調整 */
+  max-width: fit-content;
+}
+
+.application_title a {
+  text-decoration: none;
+  color: inherit;
+}
