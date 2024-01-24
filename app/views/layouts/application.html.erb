@@ -12,31 +12,21 @@
   </head>
 
   <body>
-
      <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">認知行動療法実践アプリ</a></h1>
+        <h1 class="application_title"><a href="/">認知行動療法実践アプリ</a></h1>
         <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
-            <%#= link_to "投稿する", , class: "post" %>
-          </div>
+        <div class="log_out_button">
+          <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+        </div>
         <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-          </div>
+        <div>
+          <%#= link_to "ログイン", new_user_session_path, class: "post" %>
+          <%#= link_to "新規登録", new_user_registration_path, class: "post" %>
+        </div>
         <% end %>
-      </div>
     </header>
 
     <%= yield %>
-
-    <footer>
-      <p>
-        ここはフッターです
-      </p>
-    </footer>
 
   </body>
 </html>

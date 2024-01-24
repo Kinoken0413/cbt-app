@@ -1,7 +1,14 @@
-<h1>Works#index</h1>
-<p>Find me in app/views/works/index.html.erb</p>
+<div class="explanation">
+  <p><b>認知行動療法（CBT）</b>は認知に働きかけて気持ちを楽にする精神療法(心理療法)の一種です。
+  認知は、ものの受け取り方や考え方という意味です。
+  ストレスを感じると私たちは悲観的に考えがちになって、問題を解決できないこころの状態に追い込んでいきますが、
+  認知療法では、そうした考え方のバランスを取ってストレスに上手に対応できるこころの状態をつくっていきます。</p>
+  引用：<a href="https://cbt.ncnp.go.jp/contents/about.php">認知行動療法センター 「認知行動療法とは」</a>
+</div>
 
-<a href="<%= new_work_path %>">ワークを開始する</a>
+<div class="center_button">
+  <a href="<%= new_work_path %>" class="work_start_button">ワークを開始する</a>
+</div>
 
 <div class="works">
   <%= render partial: 'work', locals: { works: @works } %>
