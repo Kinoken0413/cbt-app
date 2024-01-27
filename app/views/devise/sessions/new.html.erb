@@ -1,8 +1,8 @@
-<div class="contents row">
-  <div class="container">
+<div class="wrapper">
+  <div class="login_container">
     <h2>ログイン</h2>
     <%= link_to "ユーザー登録がまだの方はこちら", new_user_registration_path %>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'login-form', local: true do |f| %>
       <%= flash[:notice] %>
       <%= flash[:alert] %>
 

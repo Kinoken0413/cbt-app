@@ -94,3 +94,54 @@
 .cell_date, .cell_distortion, .cell_detail {
   width: 10%;
 }
+
+/* ログイン画面 */
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面の高さいっぱいに表示する */
+}
+
+.login_container {
+  width: 25%; /* 画面の横幅の50% */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login_container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  width: 100%; /* フォームの幅を100%に */
+}
+
+.field {
+  margin-top: 30px;
+}
+.field input {
+  width: 80%;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 30px;
+}
