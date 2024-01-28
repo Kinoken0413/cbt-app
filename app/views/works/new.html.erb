@@ -1,12 +1,20 @@
-<div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
+<div class="contents">
+  <div class="work_container">
+    <h2>認知行動療法実践フォーム</h2>
+    <p>※ここでは、認知行動療法の中でもポピュラーな「トリプルカラム法」を採用しています</p>
     <%= form_with(model: @work, local: true) do |form| %>
       <%= render 'shared/error_messages', model: @work, object: form.object %>
-      <%= form.text_area :automatic_thought, placeholder: "自動思考" %>
-      <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) %>
-      <%= form.text_area :rational_thought, placeholder: "合理的な反応", rows: "10" %>
-      <%= form.submit "SEND" %>
+      <h4>自動思考（自己批判的）</h4>
+      <%= form.text_area :automatic_thought, placeholder: "自動思考", class: "textarea_wide", rows: "5" %>
+      <h4>認知のゆがみ</h4>
+      <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
+        <%= b.label { b.radio_button + b.text } %><br>
+      <% end %>
+      <h4>合理的な反応（自己擁護的）</h4>
+      <%= form.text_area :rational_thought, placeholder: "合理的な反応", class: "textarea_wide", rows: "5" %><br>
+      <div class="actions">
+        <%= form.submit "内容を保存" %>
+      </div>
     <% end %>
   </div>
 </div>
