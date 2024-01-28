@@ -3,6 +3,10 @@
   justify-content: space-between;
 }
 
+.footer {
+  height: 30px;
+}
+
 .application_title {
   background-color: #33CC66;
   display: inline-block;
@@ -69,7 +73,7 @@
 }
 
 .works_container {
-  margin: 40px;
+  padding: 40px;
 }
 
 .works_table {
