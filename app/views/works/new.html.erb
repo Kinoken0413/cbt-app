@@ -4,7 +4,9 @@
     <p>※ここでは、認知行動療法の中でもポピュラーな「トリプルカラム法」を採用しています</p>
     <%= form_with(model: @work, local: true) do |form| %>
       <%= render 'shared/error_messages', model: @work, object: form.object %>
-      <h4>自動思考（自己批判的）</h4>
+      <h4>1. 心に浮かんだネガティブな出来事・感情をひとつ選び、そのことについて書いてください。</h4>
+      <p>この内容は他人に見せるためのものではありませんので、内容がまとまっていなくても構いません。<br>
+      心に浮かんだままに表現してください。</p>
       <%= form.text_area :automatic_thought, placeholder: "自動思考", class: "textarea_wide", rows: "5" %>
       <h4>認知のゆがみ</h4>
       <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
