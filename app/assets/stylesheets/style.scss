@@ -36,6 +36,12 @@
   border-radius: 5px;
   padding: 15px 30px;
   font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s; /* アニメーションの追加 */
+}
+
+.log_out_button a:hover {
+  background-color: #e0e0e0; /* マウスオーバー時の背景色変更 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* マウスオーバー時の影の追加 */
 }
 
 .explanation {
@@ -141,6 +147,9 @@ body, html {
 .actions {
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* ワーク投稿画面 */
@@ -166,4 +175,33 @@ body, html {
 
 .textarea_wide {
   width: 100%;
+}
+
+/* ワーク詳細表示画面 */
+
+.edit_button, .delete_button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s; /* アニメーションの追加 */
+}
+
+.edit_button {
+  color: #3498db;
+  background-color: #C2EEFF;
+  border: 2px solid #2C7CFF;
+}
+
+.delete_button {
+  color: #e74c3c;
+  background-color: #f2dede;
+  border: 2px solid #d9534f;
+
+  &:hover {
+    color: #CC0000;
+    background-color: #ebcccc; /* マウスオーバー時の背景色変更 */
+    border: 2px solid #d43f3a; /* マウスオーバー時のボーダー変更 */
+  }
 }
