@@ -12,20 +12,20 @@
   </head>
 
   <body>
-     <header class="header">
-        <h1 class="application_title"><a href="/">認知行動療法実践アプリ</a></h1>
-        <% if user_signed_in? %>
+    <header class="header">
+      <h1 class="application_title"><a href="/">認知行動療法実践アプリ</a></h1>
+      <% if user_signed_in? %>
         <div class="log_out_button">
           <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
         </div>
-        <% else %>
-        <div>
-          <%#= link_to "ログイン", new_user_session_path, class: "post" %>
-          <%#= link_to "新規登録", new_user_registration_path, class: "post" %>
+      <% else %>
+        <div class="log_in_buttons">
+          <%= link_to "ログイン", new_user_session_path, class: "log_in_button" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "registration_button" %>
         </div>
-        <% end %>
+      <% end %>
     </header>
-
+    
     <%= yield %>
 
     <footer></footer>

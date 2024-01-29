@@ -20,28 +20,27 @@
   color: inherit;
 }
 
-.log_out_button {
+.log_out_button, .log_in_buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 30px;
 }
 
-.log_out_button a {
+.log_out_button a, .log_in_buttons a {
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  background-color: #f0f0f0;
+  font-weight: bold;
+  padding: 15px 30px;
+  margin-right: 10px; /* ログインボタンの右側に余白を追加 */
   border: 2px solid #f0f0f0;
   border-radius: 5px;
-  padding: 15px 30px;
-  font-weight: bold;
-  transition: background-color 0.3s, box-shadow 0.3s; /* アニメーションの追加 */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.log_out_button a:hover {
-  background-color: #e0e0e0; /* マウスオーバー時の背景色変更 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* マウスオーバー時の影の追加 */
+.log_out_button a:hover, .log_in_buttons a:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .explanation {
@@ -103,6 +102,14 @@
 
 .cell_date, .cell_distortion, .cell_detail {
   width: 10%;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px; /* 文字を大きくする */
+  margin-top: 30px; /* 上部に余白を追加 */
+  margin-bottom: 30px; /* 下部に余白を追加 */
+  font-weight: bold;
 }
 
 /* ログイン画面 */
