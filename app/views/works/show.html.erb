@@ -1,15 +1,19 @@
-<div class="work">
-  <h2>自動思考： <%= @work.automatic_thought %></h2>
-  <p>投稿日時: <%= @work.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %></p>
-  <p>認知のゆがみ: <%= CognitiveDistortion.find(@work.cognitive_distortion_id).name %></p>
-  <p>合理的な反応: <%= @work.rational_thought %></p>
+<div class="contents">
+  <div class="work_container">
+    <h2><%= @work.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %>のワーク</h2>
+    
+    <h4>自動思考（自己批判的）</h4>
+    <p class="textarea_wide"><%= @work.automatic_thought %></p>
 
-  <ul class="more_list">
-    <li>
-      <%= link_to '編集', edit_work_path(@work.id) %>
-    </li>
-    <li>
-      <%= link_to '削除', work_path(@work.id), data: { turbo_method: :delete } %>
-    </li>
-  </ul>
+    <h4>認知のゆがみ</h4>
+    <p class="cognitive-distortion"><%= CognitiveDistortion.find(@work.cognitive_distortion_id).name %></p>
+
+    <h4>合理的な反応（自己擁護的）</h4>
+    <p class="textarea_wide"><%= @work.rational_thought %></p>
+
+    <div class="actions">
+      <%= link_to '編集', edit_work_path(@work.id), class: 'edit_button' %>
+      <%= link_to '削除', work_path(@work.id), data: { turbo_method: :delete }, class: 'delete_button' %>
+    </div>
+  </div>
 </div>
