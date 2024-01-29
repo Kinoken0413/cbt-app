@@ -1,9 +1,14 @@
+<!-- モデルのエラーメッセージがある場合に表示する部分 -->
+
 <% if model.errors.any? %>
-<div class="error-alert">
-  <ul>
-    <% model.errors.full_messages.each do |message| %>
-    <li class='error-message'><%= message %></li>
-    <% end %>
-  </ul>
-</div>
+  <!-- エラーアラートのコンテナ -->
+  <div class="error-alert">
+    <!-- エラーメッセージのリスト -->
+    <ul>
+      <% model.errors.full_messages.each do |message| %>
+        <!-- 各エラーメッセージの表示 -->
+        <li class='error-message'><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
