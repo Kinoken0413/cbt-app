@@ -1,10 +1,9 @@
 class WorksController < ApplicationController
-  before_action :authenticate_user!
-  before_action :move_to_index, except: [:index]
+  before_action :authenticate_user!, except: [:index]
   before_action :set_work, only: [:show, :edit, :update]
   
   def index
-    @works = current_user.works
+    @works = current_user.works if user_signed_in?
   end
 
   def new
@@ -41,12 +40,6 @@ class WorksController < ApplicationController
   end
 
   private
-
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
-  end
 
   def work_params
     params.require(:work).permit(:automatic_thought,:cognitive_distortion_id,:rational_thought).merge(user_id: current_user.id)
