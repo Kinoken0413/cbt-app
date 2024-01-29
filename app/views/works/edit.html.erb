@@ -1,16 +1,28 @@
 <div class="contents">
+  <!-- フォーム編集画面の表示コンテナ -->
   <div class="work_container">
+    <!-- タイトル：フォーム編集画面 -->
     <h2>フォーム編集画面</h2>
+    
+    <!-- フォームの作成とエラーメッセージ表示 -->
     <%= form_with(model: @work, local: true) do |form| %>
       <%= render 'shared/error_messages', model: @work, object: form.object %>
+      
+      <!-- 自動思考の編集フォーム -->
       <h4>自動思考（自己批判的）</h4>
       <%= form.text_area :automatic_thought, placeholder: "自動思考", class: "textarea_wide", rows: "5" %>
+      
+      <!-- 認知のゆがみの編集フォーム -->
       <h4>認知のゆがみ</h4>
       <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
         <%= b.label { b.radio_button + b.text } %><br>
       <% end %>
+      
+      <!-- 合理的な反応の編集フォーム -->
       <h4>合理的な反応（自己擁護的）</h4>
       <%= form.text_area :rational_thought, placeholder: "合理的な反応", class: "textarea_wide", rows: "5" %><br>
+      
+      <!-- 変更内容を保存するアクションボタン -->
       <div class="actions">
         <%= form.submit "内容を変更して保存" %>
       </div>
