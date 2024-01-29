@@ -1,16 +1,22 @@
 <div class="contents">
+  <!-- ワーク詳細の表示コンテナ -->
   <div class="work_container">
+    <!-- ワークの作成日時を表示 -->
     <h2><%= @work.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %>のワーク</h2>
     
+    <!-- 自動思考の表示 -->
     <h4>自動思考（自己批判的）</h4>
     <p class="textarea_wide"><%= @work.automatic_thought %></p>
 
+    <!-- 認知のゆがみの表示 -->
     <h4>認知のゆがみ</h4>
     <p class="cognitive-distortion"><%= CognitiveDistortion.find(@work.cognitive_distortion_id).name %></p>
 
+    <!-- 合理的な反応の表示 -->
     <h4>合理的な反応（自己擁護的）</h4>
     <p class="textarea_wide"><%= @work.rational_thought %></p>
 
+    <!-- 編集と削除のアクションボタン -->
     <div class="actions">
       <%= link_to '編集', edit_work_path(@work.id), class: 'edit_button' %>
       <%= link_to '削除', work_path(@work.id), data: { turbo_method: :delete }, class: 'delete_button' %>

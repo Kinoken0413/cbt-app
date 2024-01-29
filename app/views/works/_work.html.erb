@@ -1,6 +1,9 @@
 <% if works&.any? %>
+  <!-- ワークが存在する場合の表示 -->
   <div class="works_container">
+    <!-- ワークの一覧を表示するテーブル -->
     <table class="works_table">
+      <!-- テーブルのヘッダー -->
       <thead>
         <tr>
           <th>投稿日時</th>
@@ -10,16 +13,23 @@
           <th>詳細</th>
         </tr>
       </thead>
+      <!-- テーブルのボディ -->
       <tbody>
         <% works.each do |work| %>
+          <!-- 各ワークの行 -->
           <tr>
+            <!-- 投稿日時セル -->
             <td class="cell_date">
               <%= work.created_at.strftime('%Y年%-m月%-d日') %><br>
               <%= work.created_at.strftime('%H時%M分') %>
             </td>
+            <!-- 自動思考セル -->
             <td class="cell_auto"><%= work.automatic_thought %></td>
+            <!-- 認知のゆがみセル -->
             <td class="cell_distortion"><%= CognitiveDistortion.find(work.cognitive_distortion_id).name %></td>
+            <!-- 合理的な反応セル -->
             <td class="cell_rational"><%= work.rational_thought %></td>
+            <!-- 詳細リンクセル -->
             <td class="cell_detail"><%= link_to "詳細を見る", work_path(work.id) %></td>
           </tr>
         <% end %>

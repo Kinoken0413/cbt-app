@@ -1,4 +1,5 @@
 class CognitiveDistortion < ActiveHash::Base
+  # ActiveHashの機能を使用してデータを定義
   self.data = [
     { id: 1, name: '全か無か思考' },
     { id: 2, name: '一般化のし過ぎ' },
@@ -12,6 +13,7 @@ class CognitiveDistortion < ActiveHash::Base
     { id: 10, name: '個人化' }
   ]
 
+  # ActiveHashの関連付けを実現するための記述
   include ActiveHash::Associations
   has_many :works
 end

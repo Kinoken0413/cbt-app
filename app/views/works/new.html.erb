@@ -1,17 +1,34 @@
 <div class="contents">
+  <!-- 認知行動療法実践フォームのコンテナ -->
   <div class="work_container">
+    <!-- フォームのタイトル -->
     <h2>認知行動療法実践フォーム</h2>
+    <!-- フォームの説明文 -->
     <p>※ここでは、認知行動療法の中でもポピュラーな「トリプルカラム法」を採用しています</p>
+
     <%= form_with(model: @work, local: true) do |form| %>
+      <!-- エラーメッセージの表示 -->
       <%= render 'shared/error_messages', model: @work, object: form.object %>
-      <h4>自動思考（自己批判的）</h4>
+
+      <!-- ステップ1の説明 -->
+      <h4>1. 心に浮かんだネガティブな出来事・感情をひとつ選び、そのことについて書いてください。</h4>
+      <p>この内容は他人に見せるためのものではありませんので、内容がまとまっていなくても構いません。<br>
+        心に浮かんだままに表現してください。</p>
+
+      <!-- 自動思考の入力フォーム -->
       <%= form.text_area :automatic_thought, placeholder: "自動思考", class: "textarea_wide", rows: "5" %>
+
+      <!-- 認知のゆがみの選択フォーム -->
       <h4>認知のゆがみ</h4>
       <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
         <%= b.label { b.radio_button + b.text } %><br>
       <% end %>
+
+      <!-- 合理的な反応の入力フォーム -->
       <h4>合理的な反応（自己擁護的）</h4>
       <%= form.text_area :rational_thought, placeholder: "合理的な反応", class: "textarea_wide", rows: "5" %><br>
+
+      <!-- 送信ボタン -->
       <div class="actions">
         <%= form.submit "内容を保存" %>
       </div>

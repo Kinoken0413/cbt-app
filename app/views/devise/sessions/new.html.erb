@@ -1,21 +1,33 @@
+<!-- ページ全体のコンテンツを囲むセクション -->
 <div class="contents">
+  <!-- ユーザー関連のコンテンツをまとめたコンテナ -->
   <div class="user_container">
+    <!-- ヘッダーとして表示される見出し -->
     <h2>ログイン画面</h2>
+
+    <!-- ユーザー新規登録ページへのリンク -->
     <%= link_to "ユーザー登録がまだの方はこちら", new_user_registration_path %>
+
+    <!-- ログイン用のフォーム -->
     <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'login-form', local: true do |f| %>
+      
+      <!-- フラッシュメッセージの表示 -->
       <%= flash[:notice] %>
       <%= flash[:alert] %>
 
+      <!-- メールアドレス入力欄 -->
       <div class="field">
         <%= f.label :Eメールアドレス %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
 
+      <!-- パスワード入力欄 -->
       <div class="field">
         <%= f.label :パスワード %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
+      <!-- "Remember Me" チェックボックス -->
       <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.label :ログイン状態を保持 %><br />
@@ -23,6 +35,7 @@
         </div>
       <% end -%>
 
+      <!-- アクションボタン -->
       <div class="actions">
         <%= f.submit "ログインする" %>
       </div>
