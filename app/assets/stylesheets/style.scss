@@ -1,12 +1,15 @@
+/* ヘッダーのスタイル */
 .header {
   display: flex;
   justify-content: space-between;
 }
 
+/* フッターのスタイル */
 .footer {
   height: 30px;
 }
 
+/* アプリケーションタイトルのスタイル */
 .application_title {
   background-color: #33CC66;
   display: inline-block;
@@ -20,6 +23,7 @@
   color: inherit;
 }
 
+/* ログアウトボタンとログインボタンのスタイル */
 .log_out_button, .log_in_buttons {
   display: flex;
   align-items: center;
@@ -32,7 +36,7 @@
   font-size: 16px;
   font-weight: bold;
   padding: 15px 30px;
-  margin-right: 10px; /* ログインボタンの右側に余白を追加 */
+  margin-right: 10px;
   border: 2px solid #f0f0f0;
   border-radius: 5px;
   transition: background-color 0.3s, box-shadow 0.3s;
@@ -43,9 +47,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 説明文のスタイル */
 .explanation {
   text-align: center;
-  max-width: 600px; /* テキストの最大幅を設定 */
+  max-width: 600px;
   margin: 30px auto;
   background-color: #f5f5f5;
   border: 1px solid #f5f5f5;
@@ -53,6 +58,7 @@
   padding: 20px;
 }
 
+/* 中央揃えのボタンのスタイル */
 .center_button {
   display: flex;
   justify-content: center;
@@ -77,10 +83,12 @@
   border: 2px solid #3367d6;
 }
 
+/* ワーク一覧のコンテナのスタイル */
 .works_container {
   padding: 40px;
 }
 
+/* ワーク一覧のテーブルのスタイル */
 .works_table {
   width: 100%;
   border-collapse: collapse;
@@ -96,6 +104,7 @@
   background-color: #f0f0f0;
 }
 
+/* ワーク一覧のセルのスタイル */
 .cell_auto, .cell_rational {
   width: 35%;
 }
@@ -104,15 +113,16 @@
   width: 10%;
 }
 
+/* メッセージのスタイル */
 .message {
   text-align: center;
-  font-size: 18px; /* 文字を大きくする */
-  margin-top: 30px; /* 上部に余白を追加 */
-  margin-bottom: 30px; /* 下部に余白を追加 */
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
-/* ログイン画面 */
+/* ログイン画面のスタイル */
 
 body, html {
   height: 100%;
@@ -147,6 +157,7 @@ body, html {
 .field {
   margin-top: 30px;
 }
+
 .field input {
   width: 80%;
 }
@@ -159,8 +170,7 @@ body, html {
   align-items: center;
 }
 
-/* ワーク投稿画面 */
-
+/* ワーク投稿画面のスタイル */
 .work_container {
   width: 50%;
   margin: 0 auto;
@@ -184,15 +194,14 @@ body, html {
   width: 100%;
 }
 
-/* ワーク詳細表示画面 */
-
+/* ワーク詳細表示画面のスタイル */
 .edit_button, .delete_button {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   padding: 15px 30px;
   border-radius: 5px;
-  transition: background-color 0.3s, border 0.3s, color 0.3s; /* アニメーションの追加 */
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
 .edit_button {
@@ -208,7 +217,7 @@ body, html {
 
   &:hover {
     color: #CC0000;
-    background-color: #ebcccc; /* マウスオーバー時の背景色変更 */
-    border: 2px solid #d43f3a; /* マウスオーバー時のボーダー変更 */
+    background-color: #ebcccc;
+    border: 2px solid #d43f3a;
   }
 }
