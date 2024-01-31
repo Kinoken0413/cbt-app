@@ -194,6 +194,25 @@ body, html {
   width: 100%;
 }
 
+.distortion-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px; /* 余白を小さく調整 */
+}
+
+.distortion-option input {
+  margin-right: 5px; /* ラジオボタン右側の余白 */
+}
+
+.distortion-option label {
+  font-weight: bold;
+}
+
+.distortion-description {
+  padding-left: 10px; /* 説明文に対して左側の余白を追加 */
+  margin-bottom: 10px;
+}
+
 /* ワーク詳細表示画面のスタイル */
 .edit_button, .delete_button {
   text-decoration: none;
