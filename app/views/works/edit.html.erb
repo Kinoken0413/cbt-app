@@ -15,7 +15,12 @@
       <!-- 認知のゆがみの編集フォーム -->
       <h4>認知のゆがみ</h4>
       <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
-        <%= b.label { b.radio_button + b.text } %><br>
+        <div class="distortion-option">
+          <%= b.label { b.radio_button + b.text } %>
+        </div>
+        <div class="distortion-description">
+          <%= CognitiveDistortion.find(b.value.to_i).description.html_safe %>
+        </div>
       <% end %>
       
       <!-- 合理的な反応の編集フォーム -->
