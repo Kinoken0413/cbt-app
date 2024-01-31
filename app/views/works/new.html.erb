@@ -3,27 +3,42 @@
   <div class="work_container">
     <!-- フォームのタイトル -->
     <h2>認知行動療法実践フォーム</h2>
-    <!-- フォームの説明文 -->
-    <p>※ここでは、認知行動療法の中でもポピュラーな「トリプルカラム法」を採用しています</p>
 
     <%= form_with(model: @work, local: true) do |form| %>
       <!-- エラーメッセージの表示 -->
       <%= render 'shared/error_messages', model: @work, object: form.object %>
 
       <!-- ステップ1の説明 -->
-      <h4>1. 心に浮かんだネガティブな出来事・感情をひとつ選び、そのことについて書いてください。</h4>
+      <h4>1. 今日、あなたが経験した出来事や感情をひとつ選び、ありのままの感情を書き出してください。</h4>
       <p>この内容は他人に見せるためのものではありませんので、内容がまとまっていなくても構いません。<br>
-        心に浮かんだままに表現してください。</p>
+        考えすぎず、素直な気持ちを文字にしてみてください。<br>
+        なお、個々の出来事に対する無意識な心の反応や考え方を、認知行動療法では「自動思考」と呼びます。</p>
 
       <!-- 自動思考の入力フォーム -->
       <%= form.text_area :automatic_thought, placeholder: "自分はいつも遅刻してしまう。", class: "textarea_wide", rows: "5" %>
 
+      <!-- ステップ2の説明 -->
+      <h4>2. 以下の中から、今日の出来事に関するあなた自身の考え方に一番当てはまるものを選んでください。</h4>
+      <p>認知行動療法では、人が思考する際に陥りやすい思考パターンを10個にまとめています。<br>
+        この項目は、自分の思考が陥っている認知のゆがみに気づくきっかけを作ることが目的です。<br>
+        唯一の正解などはありませんので、選択に時間をかけ過ぎる必要はありません。
+      </p>
+
       <!-- 認知のゆがみの選択フォーム -->
-      <h4>認知のゆがみ</h4>
       <%= form.collection_radio_buttons(:cognitive_distortion_id, CognitiveDistortion.all, :id, :name) do |b| %>
-        <%= b.label { b.radio_button + b.text } %><br>
+        <div class="distortion-option">
+          <%= b.label { b.radio_button + b.text } %>
+        </div>
+        <div class="distortion-description">
+          <%= CognitiveDistortion.find(b.value.to_i).description.html_safe %>
+        </div>
       <% end %>
 
+      <!-- ステップ3の説明 -->
+      <h4>3. 先ほどの選択肢を参考にしながら、ステップ1で記入した出来事について、より建設的で合理的な反応を思い浮かべてください。</h4>
+      <p>無理にポジティブに考える必要はありません。その代わりに、客観的で現実的な視点から出来事を観察するよう意識してください。<br>
+        また、自分に対しても他人に対しても優しく、理解を深めるための反応を心がけましょう。
+      </p>
       <!-- 合理的な反応の入力フォーム -->
       <h4>合理的な反応（自己擁護的）</h4>
       <%= form.text_area :rational_thought, placeholder: "「いつも」遅刻しているわけじゃない。時間通りに行けたこともあるはずだ。また、実際によく遅刻してしまうなら、どうすれば遅刻しないか具体的な方法を考えよう。", class: "textarea_wide", rows: "5" %><br>
