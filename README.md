@@ -79,6 +79,7 @@ https://cbt-app.onrender.com
 - belongs_to :user
 
 # 画面遷移図
+![cbt-app.drawio](cbt-app.svg)
 
 # 開発環境
 ・フロントエンド：HTML, CSS<br>
