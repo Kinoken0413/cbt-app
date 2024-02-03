@@ -19,7 +19,7 @@
     <!-- 編集と削除のアクションボタン -->
     <div class="actions">
       <%= link_to '編集', edit_work_path(@work.id), class: 'edit_button' %>
-      <%= link_to '削除', work_path(@work.id), data: { turbo_method: :delete }, class: 'delete_button' %>
+      <%= link_to '削除', work_path(@work.id), data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか？' }, class: 'delete_button' %>
     </div>
   </div>
 </div>
