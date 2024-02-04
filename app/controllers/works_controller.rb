@@ -5,11 +5,9 @@ class WorksController < ApplicationController
   # show, edit, updateアクションで共通のワークデータを設定
   before_action :set_work, only: [:show, :edit, :update]
   
-  # ユーザーのワーク一覧を投稿日時を基準にして降順に表示するためのアクション
+  # ユーザーのワーク一覧を表示するためのアクション
   def index
-    if user_signed_in?
-      @works = current_user.works.order(created_at: :desc)
-    end
+    @works = current_user.works if user_signed_in?
   end
 
   # 新しいワークを作成するためのアクション
