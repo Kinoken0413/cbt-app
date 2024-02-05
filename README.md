@@ -45,15 +45,16 @@ https://cbt-app.onrender.com
 ・ログアウトしている時には、過去に投稿したワークおよびワーク新規投稿ページに遷移するボタンが表示されません<br>
 ・ヘッダーに、ユーザー新規登録ページに遷移するボタンとログインページに遷移するボタンが表示されます<br>
 
-[![Image from Gyazo](https://i.gyazo.com/e9a24c0a779874effd7365d402aa12f8.png)](https://gyazo.com/e9a24c0a779874effd7365d402aa12f8)
+[![Image from Gyazo](https://i.gyazo.com/d0959c18bde34447a59932e1394462db.gif)](https://gyazo.com/d0959c18bde34447a59932e1394462db)
 ・ログインをすると、ワーク新規投稿ページに遷移するボタンとユーザーが過去に投稿したワークが表示されます<br>
+・表示順は、1)各テーブルは投稿日時を基準にして降順　2)テーブル内の各レコードは昇順
 ・また、レコードに右端にある「詳細を見る」をクリックすると、選択したワークの詳細ページに遷移します<br>
 
 ## ワーク新規投稿ページ
 [![Image from Gyazo](https://i.gyazo.com/f88a939162017e59cbea0646b96d70ac.png)](https://gyazo.com/f88a939162017e59cbea0646b96d70ac)
 ・記入を促すための説明文を入れています<br>
 
-[![Image from Gyazo](https://i.gyazo.com/c1732eb87f13ed000a8408895abdb3e6.png)](https://gyazo.com/c1732eb87f13ed000a8408895abdb3e6)
+[![Image from Gyazo](https://i.gyazo.com/29155ea8d27b44b88a40cfff6947d384.png)](https://gyazo.com/29155ea8d27b44b88a40cfff6947d384)
 <br>・各選択肢の説明分を追加することで、認知行動療法になじみのないユーザーでも利用しやすいようにしています<br>
 
 [![Image from Gyazo](https://i.gyazo.com/0593b97d71705705e6c8fb6d2daa6602.png)](https://gyazo.com/0593b97d71705705e6c8fb6d2daa6602)
@@ -61,8 +62,9 @@ https://cbt-app.onrender.com
 
 ## ワーク詳細ページ
 [![Image from Gyazo](https://i.gyazo.com/4361a94263674fc0ab0167bf52f35b71.png)](https://gyazo.com/4361a94263674fc0ab0167bf52f35b71)
-・編集ページに遷移するボタンと削除ボタンの色を分けることで、ユーザーが間違わないようにしています<br>
+・編集ページに遷移するボタンと削除ボタンの色を分けることで、ユーザーが区別しやすいようにしています<br>
 
+[![Image from Gyazo](https://i.gyazo.com/f3f884b74c86c1db387a77c1efd3fc49.gif)](https://gyazo.com/f3f884b74c86c1db387a77c1efd3fc49)
 ・また、削除前に確認ダイアログを表示させることで、ユーザーが意図しない削除が行われないようにしています<br>
 
 ## 編集ページ
@@ -74,10 +76,6 @@ https://cbt-app.onrender.com
 
 ## 投稿一覧ページ関連
 ・表示したいワークを投稿日時で絞り込める機能<br>
-・ワークを日付ごとにまとめて表示する機能<br>
-
-## 詳細ページ関連
-・削除ボタンをクリックした際にアラートを表示する機能
 
 ## エラーメッセージ関連
 ・エラーメッセージが日本語で表示されるように修正
