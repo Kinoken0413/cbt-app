@@ -63,9 +63,12 @@ https://cbt-app.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/4361a94263674fc0ab0167bf52f35b71.png)](https://gyazo.com/4361a94263674fc0ab0167bf52f35b71)
 ・編集ページに遷移するボタンと削除ボタンの色を分けることで、ユーザーが間違わないようにしています<br>
 
+・また、削除前に確認ダイアログを表示させることで、ユーザーが意図しない削除が行われないようにしています<br>
+
 ## 編集ページ
 [![Image from Gyazo](https://i.gyazo.com/e818297b004994e6d422928e6cc89242.png)](https://gyazo.com/e818297b004994e6d422928e6cc89242)
 <br>・新規投稿ページとほぼ同じですが、説明文を削除することでよりシンプルにしています<br>
+
 
 # 実装予定の機能
 
