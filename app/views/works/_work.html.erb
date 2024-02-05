@@ -1,7 +1,7 @@
 <!-- ワーク一覧を表示するセクション -->
 <div class="works">
   <% if works&.any? %>
-    <% works.group_by { |work| work.created_at.to_date }.each do |date, works_on_date| %>
+    <% works.group_by { |work| work.created_at.to_date }.sort_by { |date, _| date }.reverse_each do |date, works_on_date| %>
       <!-- 日付ごとにテーブルを作成 -->
       <div class="works_container">
         <h2><%= date.strftime('%Y年%-m月%-d日') %></h2>
@@ -20,7 +20,6 @@
           <!-- テーブルのボディ -->
           <tbody>
             <% works_on_date.each do |work| %>
-              <!-- 各ワークの行 -->
               <tr>
                 <!-- 投稿日時セル -->
                 <td class="cell_date">
