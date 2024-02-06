@@ -10,7 +10,7 @@ ja:
         password: "パスワード"
       work:
         automatic_thought: "自動思考"
-        cognitive_distortion: "認知のゆがみ"
+        cognitive_distortion_id: "認知のゆがみ"
         rational_thought: "合理的な反応"
   errors:
     messages:
@@ -21,7 +21,7 @@ ja:
       too_short: "%{attribute}は%{count}文字以上で入力してください"
       confirmation: "%{attribute}と%{attribute}の確認用が一致しません"
       inclusion: "%{attribute}が無効です"
-      blank_cognitive_distortion: "%{attribute}を入力してください" 
+      blank_cognitive_distortion_id: "%{attribute}を入力してください"
       blank_automatic_thought: "%{attribute}を入力してください" 
       blank_rational_thought: "%{attribute}を入力してください"
   models:
@@ -37,5 +37,5 @@ ja:
       errors:
         messages:
           blank_automatic_thought: "%{attribute}を入力してください"
-          blank_cognitive_distortion: "%{attribute}を入力してください"
+          blank_cognitive_distortion_id: "%{attribute}を入力してください"
           blank_rational_thought: "%{attribute}を入力してください"
