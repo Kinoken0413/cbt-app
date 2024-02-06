@@ -1,0 +1,41 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザー"
+      work: "ワーク"
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
+      work:
+        automatic_thought: "自動思考"
+        cognitive_distortion: "認知のゆがみ"
+        rational_thought: "合理的な反応"
+  errors:
+    messages:
+      blank: "%{attribute}を入力してください"
+      taken: "%{attribute}は既に使用されています"
+      invalid: "%{attribute}が無効です"
+      too_long: "%{attribute}は%{count}文字以内で入力してください"
+      too_short: "%{attribute}は%{count}文字以上で入力してください"
+      confirmation: "%{attribute}と%{attribute}の確認用が一致しません"
+      inclusion: "%{attribute}が無効です"
+      blank_cognitive_distortion: "%{attribute}を入力してください" 
+      blank_automatic_thought: "%{attribute}を入力してください" 
+      blank_rational_thought: "%{attribute}を入力してください"
+  models:
+    user:
+      errors:
+        messages:
+          invalid_password: "パスワードが無効です。英字と数字の両方を含めてください"
+          invalid_email: "メールアドレスが無効です"
+          too_long_password: "パスワードは%{count}文字以内で入力してください"
+          too_short_password: "パスワードは%{count}文字以上で入力してください"
+          mismatched_password_confirmation: "パスワードと確認用パスワードが一致しません"
+    work:
+      errors:
+        messages:
+          blank_automatic_thought: "%{attribute}を入力してください"
+          blank_cognitive_distortion: "%{attribute}を入力してください"
+          blank_rational_thought: "%{attribute}を入力してください"
