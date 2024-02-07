@@ -14,11 +14,16 @@
   <body>
     <header class="header">
       <h1 class="application_title"><a href="/">認知行動療法実践アプリ</a></h1>
-      <!-- ユーザーがログインしているかどうかの条件分岐 -->
+      <!-- ユーザーがログインしている場合 -->
       <% if user_signed_in? %>
-        <!-- ログアウトボタン -->
-        <div class="log_out_button">
-          <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+        <!-- マイページボタンとログアウトボタン -->
+        <div class="user_actions">
+          <div class="user_profile_link">
+            <%= link_to "#{current_user.name}さんのマイページ", current_user, class: "user_profile_button" %>
+          </div>
+          <div class="log_out_button">
+            <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+          </div>
         </div>
       <% else %>
         <!-- ログインボタンと新規登録ボタン -->
@@ -28,6 +33,7 @@
         </div>
       <% end %>
     </header>
+
 
     <%= yield %>
 
