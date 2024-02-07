@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="contents">
+  <!-- ユーザー情報の表示コンテナ -->
+  <div class="user_container">
+    <h2><%= @user.name %> さんのマイページ</h2>
+
+    <!-- ユーザー名の表示 -->
+    <h4>ユーザー名</h4>
+    <p><%= @user.name %></p>
+    <!-- メールアドレスの表示 -->
+    <h4>メールアドレス</h4>
+    <p class="textarea_wide"><%= @user.email %></p>
+  </div>
+</div>
