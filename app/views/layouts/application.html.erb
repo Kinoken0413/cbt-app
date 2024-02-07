@@ -22,9 +22,13 @@
         </div>
       <% else %>
         <!-- ログインボタンと新規登録ボタン -->
-        <div class="log_in_buttons">
-          <%= link_to "ログイン", new_user_session_path, class: "log_in_button" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "registration_button" %>
+        <div class="user_actions">
+          <div class="log_in_buttons">
+            <%= link_to "ログイン", new_user_session_path, class: "log_in_button" %>
+          </div>
+          <div class="log_in_buttons">
+            <%= link_to "新規登録", new_user_registration_path, class: "registration_button" %>
+          </div>
         </div>
       <% end %>
     </header>
