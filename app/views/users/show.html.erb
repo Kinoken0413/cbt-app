@@ -9,5 +9,28 @@
     <!-- メールアドレスの表示 -->
     <h4>メールアドレス</h4>
     <p class="textarea_wide"><%= @user.email %></p>
+    <!-- カレンダーの表示 -->
+    <h4>カレンダー</h4>
+    <p>ワークを実施した日付が赤くなります</p>
+    <div class="calendar_container">
+      <% created_dates = @works.pluck(:created_at).map{ |d| d.to_date } %>
+      <% current_month = Date.today.month %>
+      <% current_year = Date.today.year %>
+      <% current_month_calendar = month_calendar(header_options: { format: '%Y年 %B' }) do |date| %>
+        <% if date.month == current_month && date.year == current_year %>
+          <% if created_dates.include?(date.to_date) %>
+            <!-- もし投稿があれば、日付を赤くする -->
+            <span class="work_date"><%= date.day %></span>
+          <% else %>
+            <%= date.day %>
+          <% end %>
+        <% elsif date.month != current_month %>
+          <%= date.day %>
+        <% end %>
+      <% end %>
+      <div class="calendar">
+        <%= current_month_calendar %>
+      </div>
+    </div>
   </div>
 </div>

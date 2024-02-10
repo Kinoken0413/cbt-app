@@ -240,3 +240,23 @@ body, html {
     border: 2px solid #d43f3a;
   }
 }
+
+.calendar_container {
+  text-align: center;
+}
+
+.calendar-title {
+  font-weight: bold;
+}
+
+.calendar {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+  width: 80%; /* 親要素の幅の80% */
+}
+
+.work_date {
+  color: red;
+}

@@ -88,3 +88,5 @@ gem 'bootstrap', '~> 5.2.3'
 gem 'jquery-rails'
 
 gem 'rails-i18n'
+
+gem 'simple_calendar'
