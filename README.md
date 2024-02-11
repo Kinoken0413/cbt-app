@@ -42,16 +42,16 @@ https://cbt-app.onrender.com
 
 ## トップページ（一覧ページ）
 [![Image from Gyazo](https://i.gyazo.com/a6a648d1e8fadfd09703b0299ba23691.png)](https://gyazo.com/a6a648d1e8fadfd09703b0299ba23691)
-・ログアウトしている時には、過去に投稿したワークおよびワーク新規投稿ページに遷移するボタンが表示されません<br>
+・ログアウトしている時には、ワーク新規投稿ページに遷移するボタンが表示されません<br>
 ・ヘッダーに、ユーザー新規登録ページに遷移するボタンとログインページに遷移するボタンが表示されます<br>
 
-[![Image from Gyazo](https://i.gyazo.com/d0959c18bde34447a59932e1394462db.gif)](https://gyazo.com/d0959c18bde34447a59932e1394462db)
-・ログインをすると、ワーク新規投稿ページに遷移するボタンとユーザーが過去に投稿したワークが表示されます<br>
+[![Image from Gyazo](https://i.gyazo.com/44b1269d8c5e47387664a55f662cf86d.gif)](https://gyazo.com/44b1269d8c5e47387664a55f662cf86d)
+・ログインをすると、ユーザー詳細ページに遷移するボタン、ワーク新規投稿ページに遷移するボタンおよびユーザーが過去に投稿したワークが表示されます<br>
 ・表示順は、1)各テーブルは投稿日時を基準にして降順　2)テーブル内の各レコードは昇順
 ・また、レコードに右端にある「詳細を見る」をクリックすると、選択したワークの詳細ページに遷移します<br>
 
 ## ワーク新規投稿ページ
-[![Image from Gyazo](https://i.gyazo.com/f88a939162017e59cbea0646b96d70ac.png)](https://gyazo.com/f88a939162017e59cbea0646b96d70ac)
+[![Image from Gyazo](https://i.gyazo.com/8a283c1359dc93277651f69c9844fa07.png)](https://gyazo.com/8a283c1359dc93277651f69c9844fa07)
 ・記入を促すための説明文を入れています<br>
 
 [![Image from Gyazo](https://i.gyazo.com/29155ea8d27b44b88a40cfff6947d384.png)](https://gyazo.com/29155ea8d27b44b88a40cfff6947d384)
@@ -61,16 +61,20 @@ https://cbt-app.onrender.com
 <br>・ユーザーが参考にできるように、placeholderに記入例を記載しています<br>
 
 ## ワーク詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/4361a94263674fc0ab0167bf52f35b71.png)](https://gyazo.com/4361a94263674fc0ab0167bf52f35b71)
+[![Image from Gyazo](https://i.gyazo.com/646351a099141d72ad4acba3c3f7edf9.png)](https://gyazo.com/646351a099141d72ad4acba3c3f7edf9)
 ・編集ページに遷移するボタンと削除ボタンの色を分けることで、ユーザーが区別しやすいようにしています<br>
 
-[![Image from Gyazo](https://i.gyazo.com/f3f884b74c86c1db387a77c1efd3fc49.gif)](https://gyazo.com/f3f884b74c86c1db387a77c1efd3fc49)
+[![Image from Gyazo](https://i.gyazo.com/630f320df95be9dda85bab2771042114.gif)](https://gyazo.com/630f320df95be9dda85bab2771042114)
 ・また、削除前に確認ダイアログを表示させることで、ユーザーが意図しない削除が行われないようにしています<br>
 
 ## 編集ページ
-[![Image from Gyazo](https://i.gyazo.com/e818297b004994e6d422928e6cc89242.png)](https://gyazo.com/e818297b004994e6d422928e6cc89242)
-<br>・新規投稿ページとほぼ同じですが、説明文を削除することでよりシンプルにしています<br>
+[![Image from Gyazo](https://i.gyazo.com/bafece4cb7b3bf97b58ef6d928f2fe28.png)](https://gyazo.com/bafece4cb7b3bf97b58ef6d928f2fe28)
+・新規投稿ページとほぼ同じですが、説明文を削除することでよりシンプルにしています<br>
 
+## ユーザー詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/914ad83307524a1c1481f5d88bc819f8.png)](https://gyazo.com/914ad83307524a1c1481f5d88bc819f8)
+・ユーザー名、登録しているメールアドレス、カレンダーを表示しています<br>
+・また、ワークを実施した日付は赤く表示されます<br>
 
 # 実装予定の機能
 
@@ -78,7 +82,6 @@ https://cbt-app.onrender.com
 ・表示したいワークを投稿日時で絞り込める機能<br>
 
 ## ユーザー関連
-・ユーザー情報詳細ページを表示する機能<br>
 ・ユーザー情報編集/削除機能<br>
 ・ワークを継続して実行した日数を表示する機能<br>
 ・ワークを継続して実行した最長日数を表示する機能<br>
