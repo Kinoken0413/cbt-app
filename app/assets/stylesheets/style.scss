@@ -197,11 +197,11 @@ body, html {
 .distortion-option {
   display: flex;
   align-items: center;
-  margin-bottom: 3px; /* 余白を小さく調整 */
+  margin-bottom: 3px;
 }
 
 .distortion-option input {
-  margin-right: 5px; /* ラジオボタン右側の余白 */
+  margin-right: 5px;
 }
 
 .distortion-option label {
@@ -209,7 +209,7 @@ body, html {
 }
 
 .distortion-description {
-  padding-left: 10px; /* 説明文に対して左側の余白を追加 */
+  padding-left: 10px;
   margin-bottom: 10px;
 }
 
@@ -254,7 +254,7 @@ body, html {
   border-radius: 8px;
   padding: 10px;
   display: inline-block;
-  width: 80%; /* 親要素の幅の80% */
+  width: 80%;
 }
 
 .work_date {
